@@ -305,10 +305,13 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-4">SNS</h4>
-              <div className="flex gap-4 text-2xl">
-                <a href="#" className="hover:text-[#C4A484] transition-colors">📷</a>
-                <a href="#" className="hover:text-[#C4A484] transition-colors">📺</a>
-                <a href="#" className="hover:text-[#C4A484] transition-colors">💬</a>
+              <div className="flex gap-4 items-center">
+                <a href="#" className="hover:opacity-80 transition-opacity">
+                  <Image src="/instagram-icon.png" alt="Instagram" width={32} height={32} className="rounded-lg" />
+                </a>
+                <a href="#" className="hover:opacity-80 transition-opacity">
+                  <Image src="/ch-icon.png" alt="Ch" width={32} height={32} className="rounded-lg" />
+                </a>
               </div>
             </div>
           </div>
