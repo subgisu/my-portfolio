@@ -1,38 +1,45 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const recipes = [
     {
+      id: "bibimbap",
       title: "비빔밥",
       desc: "신선한 나물과 고소한 참기름의 조화",
       image: "/hero-food.png",
       time: "30분"
     },
     {
+      id: "japchae",
       title: "잡채",
       desc: "쫄깃한 당면과 다채로운 야채의 만남",
       image: "/japchae.png",
       time: "40분"
     },
     {
+      id: "tteokbokki",
       title: "떡볶이",
       desc: "매콤달콤 국민 간식의 정석",
       image: "/tteokbokki.png",
       time: "25분"
     },
     {
+      id: "bulgogi",
       title: "불고기",
       desc: "달콤한 양념에 재운 부드러운 소고기",
       image: "/bulgogi.png",
       time: "35분"
     },
     {
+      id: "kimchi-jjigae",
       title: "김치찌개",
       desc: "깊은 맛의 전통 한식 찌개",
       image: "/kimchi-stew.png",
       time: "30분"
     },
     {
+      id: "banchan",
       title: "반찬 모음",
       desc: "다양한 밑반찬으로 건강한 한 끼",
       image: "/banchan.png",
@@ -134,7 +141,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recipes.map((recipe, idx) => (
-              <div key={idx} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group cursor-pointer">
+              <Link key={idx} href={`/recipes/${recipe.id}`} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group cursor-pointer block">
                 <div className="relative aspect-square overflow-hidden">
                   <Image
                     src={recipe.image}
@@ -150,7 +157,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2">{recipe.title}</h3>
                   <p className="text-[#6B6B6B]">{recipe.desc}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
