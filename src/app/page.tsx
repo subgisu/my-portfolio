@@ -66,12 +66,12 @@ export default function Home() {
     <div className="bg-[#FDF8F3] text-[#3D3D3D] min-h-screen font-sans">
       {/* Navigation */}
       <nav className="p-6 flex justify-between items-center fixed w-full bg-[#FDF8F3]/90 backdrop-blur-md z-50 border-b border-[#E8DFD5]">
-        <span className="text-2xl font-bold text-[#8B5A2B] tracking-tight">자연의맛</span>
+        <Link href="/" className="text-2xl font-bold text-[#8B5A2B] tracking-tight">자연의맛</Link>
         <div className="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#recipes" className="hover:text-[#8B5A2B] transition-colors">레시피</a>
-          <a href="#about" className="hover:text-[#8B5A2B] transition-colors">소개</a>
-          <a href="#menu" className="hover:text-[#8B5A2B] transition-colors">메뉴</a>
-          <a href="#contact" className="hover:text-[#8B5A2B] transition-colors">연락처</a>
+          <Link href="/recipes" className="hover:text-[#8B5A2B] transition-colors">레시피</Link>
+          <Link href="/about" className="hover:text-[#8B5A2B] transition-colors">소개</Link>
+          <Link href="/menu" className="hover:text-[#8B5A2B] transition-colors">메뉴</Link>
+          <Link href="/contact" className="hover:text-[#8B5A2B] transition-colors">연락처</Link>
         </div>
         <button className="md:hidden text-2xl">☰</button>
       </nav>
